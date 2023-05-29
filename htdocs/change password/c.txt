@@ -1,0 +1,18 @@
+<?php
+$servername="localhost";
+$username="";
+$password="";
+$dbname="";
+$con=new mysqli($servername,$username,$password,$dbname);
+if($con->connect_error){
+    die("Connection failed:".$con->connect_error);
+}
+$sql="UPDATE tbmembers SET values
+if($con->query($sql)==TRUE){
+echo "Profile updated successfully";
+}
+else{
+echo"Error updating record:".$con->error;
+}
+$con->close();
+?>

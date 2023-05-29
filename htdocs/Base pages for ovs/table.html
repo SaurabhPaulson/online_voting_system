@@ -1,0 +1,69 @@
+
+<html>
+<head>
+    <title> Administration Contol Panel</title>
+ <link rel="stylesheet"  type="text/css" href="twotable.css">
+<link rel="stylesheet" type="text/css" href="admin2.css">
+ <style>
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #000000;
+  border: none;
+  color: skyblue;
+  padding: 5px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+</head>
+<body>
+ <h1>MANAGE CANDIDATES</h1>
+  <a href="admin.php">Home</a> | <a href="positions.php">Manage Positions</a> | <a href="candidates.php">Manage Candidates</a> | <a href="refresh.php">Poll Results</a> | <a href="manage-admins.php">Manage Account</a> | <a href="change-pass.php">Change Password</a>  | <a href="logout.php">Logout</a>
+<div class="container">
+    <div class="login-box">
+    <div class="row">
+    <div class="col-md-6 login-left">
+         <h2 style="font:poppins;"> Add New Candidate </h2>
+         <form name="fmCandidates" id="fmCandidates" action="candidates.php" method="post" onsubmit="return candidateValidate(this)">
+          <div class="user-box">
+        <input type="text" name="name" required="">
+          <label>Name of the Candidate</label>
+         </div>
+          <label style="color:white;">Position</label>
+         <SELECT NAME="position" id="position">select
+    <OPTION VALUE="select">select
+    <?php
+    //loop through all table rows
+    while ($row=mysqli_fetch_array($positions_retrieved)){
+    echo "<OPTION VALUE=$row[position_name]>$row[position_name]";
+    //mysql_free_result($positions_retrieved);
+    //mysql_close($link);
+    }
+    ?>
+    </SELECT>
+        
+         
+           
+          <br><br>    <input type="submit" name="Submit" value="Add" />
+        </form>
+   </div>
+
+        <div class="col-md-6 login-right">
+        <h2> Admin Login </h2>
+        <form action="registration.php" method="post">
+         <div class="user-box">
+<input type="text" name="myusername" required="">
+<label>Username</label>
+</div>
+<div class="user-box">
+<input type="Password" name="mypassword" required="">
+<label>Password</label>
+</div>
+              <input type="submit" name="Submit" value="LOGIN" >  
+      </form>
+   </div>
+   </div> 
+   </div>
+</div>
+</body>
+</html>

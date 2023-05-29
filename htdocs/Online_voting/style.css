@@ -1,0 +1,53 @@
+body{
+background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(image.jpg);
+background-size: cover;
+background-position: center;
+ }
+.login-box{
+max-width: 700px;
+float: none;
+margin: 150px auto;
+}
+.login-left{
+background: rgba(211,211,211,0.5);
+padding: 30px;
+}
+.login-left{
+background: #fff;
+padding: 30px;
+}
+form-control{
+background-color: transparent !important;
+}
+header{
+    background: linear-gradient(rgba(0,0,50,0.5),rgba(0,0,50,0.5)),url(image.jpg);
+    height: 100vh;
+    -webkit-background-size: cover;
+    background-size: cover;
+    background-position: center center;
+    position: relative;
+}
+.wrapper{
+    width: 1170px;
+    margin: auto;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 1px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a {
+color: #fff;
+text-decoration: none;
+padding: 5px 20px;
+font-family: poppins;
+font-size: 16px;
+text-transform: uppercase;
+}
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+}

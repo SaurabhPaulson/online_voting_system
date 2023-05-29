@@ -1,0 +1,7 @@
+CREATE TABLE `tbmembers` (
+  `member_id` int(5) NOT NULL,
+  `first_name` varchar(45) NOT NULL,
+  `last_name` varchar(45) NOT NULL,
+  `email` varchar(45) NOT NULL,
+  `password` varchar(45) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
