@@ -1,0 +1,4 @@
+style-original
+style1-front page(Syno)
+style2-toggle sign in
+style3-regform(Steppan)

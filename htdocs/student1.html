@@ -1,0 +1,149 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Online Voting System</title>
+<link rel="stylesheet" href="style1.css">
+<style>
+.container
+{
+   
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    padding: 40px 0;
+}
+.container .card
+{
+    position: relative;
+    width: 200px;
+    height: 200px;
+    box-shadow: inset 5px 5px5pxrgba(0, 0, 0,0.05),
+                inset -5px -5px -5px rgba(255, 255, 255,0.5),
+                5px 5px5pxrgba(0, 0, 0,0.05),
+                -5px -5px -5px rgba(255, 255, 255,0.5);
+    border-radius: 15px;
+    margin: 30px;
+}
+.container .card .box
+{
+    position: absolute;
+    top: 20px;
+    left: 200px;
+    right: 20px;
+   width: fit-content;
+    bottom: 20px;
+    background: #ebf5fc;
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.1);
+    border-radius: 15px;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.container .card:hover .box
+{
+    transform: translateY(-50px);
+    box-shadow: 0 10px 40px rgba(0, 0, 0,0.2);
+    background: linear-gradient(45deg,#b95ce4,#4f29cd);
+}
+.container .card .box .content
+{
+    padding: 20px;
+    text-align: center;
+}
+.container .card .box .content h2
+{
+    position: absolute;
+    top: -10px;
+    right: 30px;
+    font-size: 8em;
+color: rgba(0, 0, 0,0.02);
+    transition: 0.5s;
+    pointer-events: none;
+}
+.container .card:hover .box .content h2
+{
+color: rgba(0, 0, 0,0.05);
+}
+.container .card .box .content h3
+{
+    font-size: 1.8em;
+color: #777;
+    z-index: 1;
+    transform: 0.5s;
+}
+.container .card .box .content p
+{
+    font-size: 1em;
+    font-weight: 300;
+color: #777;
+    z-index: 1;
+    transition: 0.5s ;
+}
+.container .card:hover .box .content h3,
+.container .card:hover .box .content p
+{
+color: #fff;
+}
+.container .card .box .content a
+{
+    position: relative;
+    display: inline-block;
+    padding: 8px 20px;
+    background: #03a9f4;
+    margin-top: 15px;
+    border-radius: 20px;
+color: #fff;
+    text-decoration: none;
+    font-weight: 400;
+    box-shadow: 0 10px 20px rgba(0, 0, 0,0.2);
+}
+.container .card:hover .box .content a
+{
+    background: #ff568f;
+}
+
+
+}
+<style>
+</head>
+<body>
+<header>
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://i.postimg.cc/GpdP362Q/logo.png" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="index.html">Home</a></li>
+<li><a href="Aboutus.html">About</a></li>
+<li><a href="Login.html">User Login</a></li>
+<li><a href="admin1.html">Admin Login</a></li>
+</ul>
+</div>
+<br><br><br><br><center> <b><font color = "white" size="7">STUDENT CONTROL PANEL</font></b></center>
+<div class="container">
+
+<div class="card">
+<div class="box">
+<div class="content">
+<a href="student.php">Control Panel</a>
+&nbsp &nbsp &nbsp
+</div></div></div>
+ <a href="vote.php">Current Polls </a><br>
+<br>
+ <a href="manage-profile.php">Manage Profile</a>&nbsp &nbsp &nbsp &nbsp<a href="changepass.php">Change Password</a> <br><br>  <a href="logout.php">Logout</a>
+</div>
+<p align="center">&nbsp;</p>
+<div id="container">
+
+<p style="color:white;">Click a link above to perform an operation.</p>
+
+
+</div>
+
+</div>
+</div>
+</body></html>
+
+

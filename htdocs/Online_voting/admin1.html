@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>OVS Admin Login</title>
+<head>
+<style>
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #000000;
+  border: none;
+  color: skyblue;
+  padding: 5px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+  <style type="text/css">
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 30px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a {
+color: #fff;
+text-decoration: none;
+padding: 5px 20px;
+font-family: poppins;
+font-size: 16px;
+text-transform: uppercase;
+}
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+}
+</style>
+<link rel="stylesheet" type="text/css" href="admin2.css">
+</head>
+<body>
+<header>
+<div class="wrapper">
+        <div class="logo">
+            <img src="logo.jpg" alt="">
+        </div></div>
+<ul class="nav-area">
+<li><a href="index.html">Home</a></li>
+<li><a href="Aboutus.html">About</a></li>
+<li><a href="login.html">User Login</a></li>
+<li><a href="admin1.html">Admin Login</a></li>
+</ul>
+<div class="login-box">
+<center><font color = "white" size="6">ADMIN LOGIN</font><center><br><br>
+<imgsrc="image_avatar.jpg" alt="avatar" class="avatar">
+<form name="form1" method="post" action="adminvalidation.php" onsubmit="return loginValidate(this)">
+<div class="user-box">
+<input type="text" name="myusername" required="">
+<label>Username</label>
+</div>
+<div class="user-box">
+<input type="Password" name="mypassword" required="">
+<label>Password</label>
+</div>
+<a href="#">
+<span></span>
+<span></span>
+<span></span>
+<span></span>
+       <input type="submit" name="Submit" value="LOGIN" >    
+</a>
+</form>
+</div>
+</body>
+</html>

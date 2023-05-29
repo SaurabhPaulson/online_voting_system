@@ -1,0 +1,180 @@
+<html>
+<head>
+<title>OVS Student Login</title>
+
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script language="JavaScript" src="js/user.js">
+</script>
+
+<style>
+input[type=button], input[type=submit], input[type=reset] {
+  background-color: #117a8b;
+ width:30%;
+  border: none;
+  color: white;
+  padding: 5px 15px;
+  text-decoration: none;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+</style>
+<style type="text/css">
+.wrapper{
+    width: 1170px;
+    margin: auto;
+}
+.nav-area{
+    float: right;
+    list-style: none;
+    margin-top: 1px;
+}
+.nav-area li{
+    display: inline-block;
+}
+.nav-area li a {
+color: #fff;
+text-decoration: none;
+padding: 5px 20px;
+font-family: poppins;
+font-size: 16px;
+text-transform: uppercase;
+}
+.nav-area li a:hover{
+    background: #fff;
+    color: #333;
+}
+</style>
+</head>
+
+<body>
+<header>
+<div class="wrapper">
+        <div class="logo">
+            <img src="logo.jpg" alt="">
+        </div>
+<ul class="nav-area">
+<li><a href="index.html">Home</a></li>
+<li><a href="Aboutus.html">About</a></li>
+<li><a href="Login.html">User Login</a></li>
+<li><a href="admin1.html">Admin Login</a></li>
+</ul>
+</div>
+
+<center>
+
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>STUDENT LOGIN</h2>
+<form name="form1" method="post" action="validation.php" onsubmit="return loginValidate(this)">
+ <label>
+        <span>Username</span>
+       <input name="myusername" type="text" id="myusername">
+      </label><br><br>
+      <label>
+        <span>Password</span>
+        <input name="mypassword" type="password" id="mypassword">
+      </label><br><br>
+<a href="forgotpass.html">Forgot Password?</a><br><br><br>
+  <input type="submit" name="Submit" value="LOGIN">
+
+</form>
+
+ </div>
+
+  <div class="sub-cont">
+
+ 
+
+      <div class="img">
+        <div class="img-text m-up">
+          <h2>New here?</h2>
+          <p>Register an account to vote for your favourite candidate!</p>
+        </div>
+        <div class="img-text m-in">
+          <h2>One of us?</h2>
+          <p>If you already has an account, just login. We've missed you!</p>
+        </div>
+        <div class="img-btn">
+          <span class="m-up">Register</span>
+          <span class="m-in">Login</span>
+        </div>
+      </div>
+      <div class="form sign-up">
+
+        <h2>REGISTER</h2>
+<form name="form1" method="post" action="register.php" onsubmit="return registerValidate(this)">
+        <label>
+          <span>First Name</span>
+          <input type="text"  name="myFirstName" required>
+        </label>
+        
+<label>
+          <span>Last Name</span>
+          <input type="text"  name="myLastName" required>
+        </label>
+
+<label>
+          <span>Class</span>
+          <input type="text"  name="class" required>
+        </label>
+
+<label>
+          <span>Roll No</span>
+          <input type="text"  name="rollno" required>
+        </label>
+
+        <label>
+          <span>Email</span>
+          <input type="email" name="myEmail" required >
+        </label>
+        <label>
+          <span>Password</span>
+          <input type="password" name="myPassword" required>
+        </label>
+        <label>
+          <span>Confirm Password</span>
+          <input type="password" name="newpass" required>
+        </label><br><br>
+  <input type='submit' name='submit' value="REGISTER">
+</form>
+      </div>
+ 
+    </div>
+  </div>
+<script type="text/javascript" src="script.js"></script>
+
+
+
+
+</center>
+</header>
+</body>
+
+<script src="js/jquery-1.2.6.min.js"></script>
+    <script>
+    $(document).ready(function(){
+      
+        $('#email').blur(function(event){
+         
+            event.preventDefault();
+            var emailId=$('#email').val();
+                                $.ajax({                     
+                            url:'checkuser.php',
+                            method:'post',
+                            data:{email:emailId},  
+                            dataType:'html',
+                            success:function(message)
+                            {
+                            $('#result').html(message);
+                            }
+                      });
+                    
+           
+
+        });
+
+    });
+   
+    </script>
+</html>
